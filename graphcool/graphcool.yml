@@ -1,0 +1,36 @@
+types: ./types.graphql
+
+functions:
+  signup:
+    type: resolver
+    schema: src/email-password/signup.graphql
+    handler:
+      code: src/email-password/signup.ts
+
+  authenticate:
+    type: resolver
+    schema: src/email-password/authenticate.graphql
+    handler:
+      code: src/email-password/authenticate.ts
+
+  loggedInUser:
+    type: resolver
+    schema: src/email-password/loggedInUser.graphql
+    handler:
+      code: src/email-password/loggedInUser.ts
+
+  createShortLink:
+    type: subscription
+    query: src/createShortLink.graphql
+    handler:
+      code: src/createShortLink.js
+
+permissions:
+  - operation: "*"
+
+
+# Your root tokens used for functions to get full access to the API
+# Read more here:
+# https://www.graph.cool/docs/reference/auth/authentication/authentication-tokens-eip7ahqu5o
+# rootTokens:
+#   - mytoken

@@ -1,0 +1,3 @@
+targets:
+  dev: local/ck7be55s600020123k6v9cjr9
+  default: dev
